@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <title>FocusNest</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <header>
+    <div id="datetime-box">
+      <span id="date"></span>
+      <span id="time"></span>
+    </div>
+  </header>
+
+  <h1 class="fade-in">🎯 FocusNest – Your Study Buddy</h1>
+
+  <!-- Theme Toggle -->
+  <div id="theme-toggle-box">
+    <label class="switch">
+      <input type="checkbox" id="theme-toggle">
+      <span class="slider round"></span>
+    </label>
+    <span id="mode-label">🌞 Light Mode</span>
+
+  </div>
+
+  <!-- Quote Section -->
+  <div id="quote-box" class="fade-in">
+    <p id="quote-text">Loading quote....</p>
+    <button onclick="showQuote()">🔄 New Quote</button>
+  </div>
+
+  <!-- Sound Buttons -->
+  <div id="sound-box">
+    <button onclick="playSound('rain')">🌧 Rain</button>
+    <button onclick="playSound('forest')">🌲 Forest</button>
+    <button onclick="playSound('coffee')">☕coffee</button>
+    <button onclick="stopSound()">⛔ Stop</button>
+  </div>
+
+  <!-- Focus Timer -->
+  <div id="timer-box">
+    <h2>⏳ Focus Timer</h2>
+    <div id="timer" class="fade-in">25:00</div>
+    <button onclick="startTimer()">▶️ Start</button>
+    <button onclick="pauseTimer()">⏸ Pause</button>
+    <button onclick="resetTimer()">🔁 Reset</button>
+  </div>
+
+  <!-- Progress Bar -->
+  <div id="progress-container">
+    <div id="progress-bar"></div>
+  </div>
+
+  <!-- Background Switcher -->
+  <div id="bg-switcher">
+    <button onclick="changeBackground()">🎨 Change Background</button>
+  </div>
+
+  <!-- To-do List -->
+  <div id="todo-box" class="fade-in">
+    <h2>📝 Your Focus Tasks</h2>
+    <input type="text" id="task-input" placeholder="Enter a task..." />
+    <button onclick="addTask()">➕ Add</button>
+    <ul id="task-list"></ul>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+
+</html>
